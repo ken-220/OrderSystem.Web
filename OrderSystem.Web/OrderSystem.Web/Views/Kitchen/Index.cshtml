@@ -1,0 +1,346 @@
+﻿@{
+    ViewBag.Title = "厨房画面";
+}
+
+<h2>厨房 - オーダー一覧</h2>
+
+<style>
+    /* ===== テーブルカード全体 ===== */
+    .k-table-card {
+        background: #ffffff;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        padding: 8px 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .k-table-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 6px;
+        border-radius: 6px;
+        background: #f5f7fb;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+
+    .k-table-name {
+        font-size: 15px;
+    }
+
+    .k-btn-close {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+
+    /* カード内スクロール */
+    .k-table-body {
+        flex: 1;
+        overflow-y: auto;
+        max-height: 260px; 
+    }
+
+    /* ===== 個々の料理行 ===== */
+    .k-item-row {
+        border-radius: 6px;
+        padding: 4px 6px;
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .k-item-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .k-item-name {
+        font-weight: 500;
+        margin-right: 4px;
+    }
+
+    .k-item-qty {
+        font-weight: bold;
+    }
+
+    .k-item-status {
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
+    .k-item-buttons {
+        margin-top: 4px;
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+        .k-item-buttons .btn {
+            padding: 1px 5px;
+            font-size: 11px;
+        }
+
+    /* ===== 状態別カラー ===== */
+    /* 調理前：白 */
+    .k-status-pending {
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+    }
+
+    /* 調理中：水色 */
+    .k-status-cooking {
+        background: #d0ebff;
+        border: 1px solid #ced4da;
+    }
+
+    /* 調理済み：黄色 */
+    .k-status-done {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+    }
+
+    /* 提供済み：濃いグレー */
+    .k-status-served {
+        background: #ced4da;
+        border: 1px solid #a5d8ff;
+    }
+
+    /* 注文なし表示 */
+    .k-empty {
+        font-size: 12px;
+        color: #999;
+        padding: 4px;
+    }
+
+    /* オプション */
+    .k-item-options {
+        margin-left: 6px;
+        margin-top: 4px;
+        font-size: 12px;
+        color: #555;
+    }
+    /* 経過時間 */
+    .k-opt-row {
+        padding-left: 4px;
+    }
+
+    /* 経過時間による警告色 */
+    .k-over15 {
+        border-left: 6px solid #ffb74d; /* オレンジ */
+    }
+
+    .k-over30 {
+        border-left: 6px solid #e57373; /* 赤 */
+    }
+
+
+</style>
+
+<div id="order-list">
+    <!-- JSでカードを注入 -->
+</div>
+
+
+
+@section scripts {
+
+    <script>
+        $(function () {
+
+            // ===== 初期表示 =====
+            loadOrders();
+
+            // ===== SignalR =====
+            var hub = $.connection.kitchenHub;
+
+            hub.client.orderCreated = function () {
+                loadOrders();
+            };
+
+            hub.client.orderStatusChanged = function () {
+                loadOrders();
+            };
+
+            $.connection.hub.start();
+
+            // ===== 5秒ごとの自動更新（カクカクしない程度） =====
+            setInterval(loadOrders, 5000);
+
+            // ==========================================
+            // テーブル単位の注文一覧を読み込んで描画
+            // ==========================================
+
+            function getElapsedColorClass(minutes) {
+                if (minutes >= 30) return "k-over30";   // 赤
+                if (minutes >= 15) return "k-over15";   // オレンジ
+                return "";
+            }
+
+
+            function loadOrders() {
+
+
+                // ★ 全テーブルのスクロール位置を保存
+                let scrollMap = {};
+                $(".k-table-body").each(function () {
+                    let tableId = $(this).data("tid");
+                    scrollMap[tableId] = $(this).scrollTop();
+                });
+
+
+                $.getJSON("/api/kitchen/table-orders", function (tables) {
+
+                    var htmlAll = '<div class="row">';
+
+                    tables.forEach(function (t) {
+
+                        htmlAll += `
+<div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="k-table-card">
+        <div class="k-table-header">
+         <span class="k-table-name">
+    ${t.TableName}
+    <span class="k-elapsed">
+        （${t.ElapsedMinutes}分）
+    </span>
+</span>
+
+          <button class="btn btn-outline-secondary k-btn-close"
+                  onclick="closeTable(${t.TableId}); return false;">
+            会計済み
+          </button>
+        </div>
+        <div class="k-table-body" data-tid="${t.TableId}">
+
+`;
+
+                        if (!t.Items || t.Items.length === 0) {
+                            htmlAll += `<p class="k-empty">注文なし</p>`;
+                        } else {
+                            // ステータスの優先度定義
+                            function getStatusOrder(st) {
+                                if (st === "PENDING") return 1;
+                                if (st === "COOKING") return 2;
+                                if (st === "DONE") return 3;
+                                if (st === "SERVED") return 4;
+                                return 999;
+                            }
+
+                            // ここでソート
+                            t.Items.sort(function (a, b) {
+                                return getStatusOrder(a.KitchenStatus) - getStatusOrder(b.KitchenStatus);
+                            });
+
+                            t.Items.forEach(function (i) {
+                                var st = i.KitchenStatus || "PENDING";
+                                var statusLabel = "調理前";
+                                var statusClass = "k-status-pending";
+
+                                if (st === "COOKING") {
+                                    statusLabel = "調理中";
+                                    statusClass = "k-status-cooking";
+                                } else if (st === "DONE") {
+                                    statusLabel = "調理済み";
+                                    statusClass = "k-status-done";
+                                } else if (st === "SERVED") {
+                                    statusLabel = "提供済み";
+                                    statusClass = "k-status-served";
+                                }
+
+                                htmlAll += `
+          <div class="k-item-row ${statusClass} ${getElapsedColorClass(i.ElapsedMinutes)}">
+
+            <div class="k-item-main">
+              <span class="k-item-name">${i.MenuName}</span>
+              <span class="k-item-qty">×${i.Quantity}</span>
+            </div>
+
+               <!-- ★ オプション表示部分 ★ -->
+        <div class="k-item-options">
+          ${i.Options && i.Options.length > 0
+            ? i.Options.map(opt =>
+                `<div class="k-opt-row">・${opt.OptionName} ${opt.ExtraPrice > 0 ? "(+" + opt.ExtraPrice + "円)" : ""}</div>`
+              ).join("")
+            : ""
+          }
+        </div>
+
+            <div class="k-item-status">${statusLabel}</div>
+
+            <div class="k-item-buttons">
+              <button class="btn btn-outline-warning"
+                      onclick="startCook(${i.OrderItemId}); return false;">開始</button>
+              <button class="btn btn-outline-success"
+                      onclick="finishCook(${i.OrderItemId}); return false;">完了</button>
+              <button class="btn btn-outline-info"
+                      onclick="serveItem(${i.OrderItemId}); return false;">提供</button>
+            </div>
+          </div>`;
+                            });
+                        }
+
+                        htmlAll += `
+        </div> <!-- /.k-table-body -->
+      </div>   <!-- /.k-table-card -->
+</div>`;
+                    });
+
+                    htmlAll += "</div>";
+
+                    // ★ DOM を更新
+                    $("#order-list").html(htmlAll);
+
+                  
+
+                    // ★ スクロール位置を復元
+                    $(".k-table-body").each(function () {
+                        let tableId = $(this).data("tid");
+                        if (scrollMap[tableId] !== undefined) {
+                            $(this).scrollTop(scrollMap[tableId]);
+                        }
+                    });
+
+                  
+                })
+                    .fail(function (xhr, status, err) {
+                        console.log("Kitchen API error:", status, err);
+                    });
+            }
+
+            // ===== グローバル関数：ステータス操作 =====
+            window.startCook = function (orderItemId) {
+                $.post("/api/kitchen/start/" + orderItemId, function () {
+                    loadOrders();
+                });
+            };
+
+            window.finishCook = function (orderItemId) {
+                $.post("/api/kitchen/done/" + orderItemId, function () {
+                    loadOrders();
+                });
+            };
+
+            window.serveItem = function (orderItemId) {
+                $.post("/api/kitchen/serve/" + orderItemId, function () {
+                    loadOrders();
+                });
+            };
+
+            window.closeTable = function (tableId) {
+                if (!confirm("テーブル " + tableId + " を会計済みにしますか？")) return;
+
+                $.post("/api/kitchen/close-table/" + tableId, function () {
+                    loadOrders();
+                });
+            };
+        });
+    </script>
+
+    <script src="~/Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <script src="/signalr/hubs"></script>
+}

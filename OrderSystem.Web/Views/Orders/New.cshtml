@@ -1,0 +1,612 @@
+﻿@model OrderSystem.Web.Models.OrdersNewViewModel
+@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = "注文";
+}
+
+<style>
+    .order-header {
+        width: 100%;
+        max-width: 1100px; /* 真ん中に寄せる */
+        margin: 20px auto 10px auto;
+    }
+
+        .order-header .header-row {
+            width: 100%;
+        }
+
+        .order-header h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+   
+
+</style>
+
+
+<!-- ===== ヘッダー全体 ===== -->
+@section PageHeader {
+    <div class="order-header mb-4">
+
+        <!-- 1段目：戻る ＋ 注文履歴（近くに並べる） -->
+        <div class="d-flex align-items-center mb-2">
+            <a href="@Url.Action("Index", "Tables")"
+               class="btn btn-outline-secondary">
+                ← テーブルに戻る
+            </a>
+
+
+            <button class="btn btn-secondary ms-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal">
+                注文履歴
+            </button>
+        </div>
+
+        <!-- 2段目：テーブル名 ＋ 人数（これも近くに並べる） -->
+        <div class="d-flex align-items-center">
+            <h2 class="m-0 me-4">テーブル：@Model.TableName</h2>
+
+            <label class="me-2 m-0">人数：</label>
+            <select id="numPeople" class="form-control" style="width:120px;">
+               @for (int i = 1; i <= 20; i++)
+               { <option value="@i">@i 人</option>
+               }
+            </select>
+        </div>
+    </div>
+}
+
+
+
+
+<style>
+
+
+
+    .category-btn {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+        background: #f7f7f7;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+        .category-btn:hover {
+            background: #e6f0ff;
+        }
+
+        .category-btn.active {
+            background: #3f8cff;
+            color: white;
+        }
+
+    .menu-card {
+        width: 100%;
+        height: 110px;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        transition: 0.2s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .menu-card:hover {
+            background: #f0f7ff;
+            border-color: #3f8cff;
+        }
+
+    .menu-card-name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu-card-price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    #cart-box {
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+</style>
+
+<div class="clearfix"></div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- 左：カテゴリ -->
+        <div class="col-md-3 col-sm-4">
+            @foreach (var cate in Model.Categories)
+            {
+                <div class="category-btn" onclick="selectCategory('@cate')">
+                    @cate
+                </div>
+            }
+        </div>
+
+        <!-- 中央：メニューカード -->
+        <div class="col-md-5 col-sm-8">
+            <div id="menu-list">
+                @foreach (var m in Model.MenuItems)
+                {
+                    <div class="menu-card" data-category="@m.Category" onclick="openItem(@m.MenuId)">
+                        <div class="menu-card-name">@m.Name</div>
+                        <div class="menu-card-price">¥@m.Price</div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- 右：カート -->
+        <div class="col-md-4 col-sm-12">
+            <div id="cart-box" class="p-3 shadow-sm" style="position:sticky; top:10px;">
+                <h4>🛒 カート</h4>
+                <hr />
+                <div id="cart-items">
+                    <p class="text-muted">カートは空です</p>
+                </div>
+                <hr />
+                <h4 id="cart-total" class="text-end">合計：0円</h4>
+                <button class="btn btn-primary w-100 mt-3" onclick="sendOrder()">
+                    注文を送信する
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========= メニュー詳細モーダル ========= -->
+<div id="item-modal-bg" style="display:none;
+     position:fixed; top:0; left:0; width:100%; height:100%;
+     background:rgba(0,0,0,0.5); z-index:1000;"></div>
+
+<div id="item-modal" style="display:none;
+     position:fixed; top:50%; left:50%;
+     transform:translate(-50%, -50%);
+     width:400px; max-width:95%;
+     background:white; border-radius:15px;
+     padding:20px; z-index:2000;
+     box-shadow:0px 4px 16px rgba(0,0,0,0.3);
+     max-height:80vh; overflow-y:auto;">
+
+    <h3 id="modal-name"></h3>
+    <p id="modal-price" style="font-size:20px; font-weight:bold;"></p>
+
+    <div style="margin:20px 0; text-align:center;">
+        <button class="btn btn-secondary" onclick="changeQty(-1)">－</button>
+        <span id="modal-qty" style="font-size:22px; margin:0 20px;">1</span>
+        <button class="btn btn-primary" onclick="changeQty(1)">＋</button>
+    </div>
+
+    <div id="option-area"></div>
+
+    <div style="text-align:center; margin-top:25px;">
+        <button class="btn btn-success w-100" onclick="addToCart()">カートに追加</button>
+    </div>
+
+    <button class="btn btn-light w-100 mt-2" onclick="closeItem()">閉じる</button>
+</div>
+
+<!-- ========= 注文内容確認モーダル ========= -->
+<div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">注文内容の確認</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="orderModalItems">
+                    <p class="text-muted">読み込み中...</p>
+                </div>
+
+                <hr />
+                <h4 class="text-end">合計：<span id="orderModalTotal">0</span> 円</h4>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                <button class="btn btn-primary" onclick="saveOrderChanges()">変更を保存</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================
+     🎯 ここから下が script — すべて Layout 後に読み込まれる！
+========================================================= -->
+@section scripts {
+    <script>
+
+
+// ---------- サーバーから受け取ったデータ ----------
+var menu = @Html.Raw(JsonConvert.SerializeObject(Model.MenuItems));
+var optionsGrouped = @Html.Raw(JsonConvert.SerializeObject(Model.OptionListGrouped));
+
+// 画面用変数
+var selectedMenu = null;
+var selectedQty = 1;
+var cart = [];
+
+// ---------- カテゴリ ----------
+function selectCategory(category) {
+    $('.category-btn').removeClass('active');
+    $(".category-btn").filter(function () {
+        return $(this).text().trim() === category;
+    }).addClass('active');
+
+    $('.menu-card').hide();
+    $('.menu-card[data-category="' + category + '"]').show();
+}
+
+$(document).ready(function () {
+    var firstCate = '@Model.Categories.FirstOrDefault()';
+    if (firstCate) selectCategory(firstCate);
+});
+
+// ---------- 商品詳細 ----------
+function openItem(menuId) {
+    selectedMenu = menu.find(x => x.MenuId === menuId);
+    if (!selectedMenu) return;
+
+    selectedQty = 1;
+    $('#modal-name').text(selectedMenu.Name);
+    $('#modal-price').text("¥" + selectedMenu.Price);
+    $('#modal-qty').text(selectedQty);
+
+    $('#option-area').empty();
+
+    for (var groupId in optionsGrouped) {
+        $('#option-area').append(`<h5 style="margin-top:15px;">オプション</h5>`);
+        optionsGrouped[groupId].forEach(function (opt) {
+            $('#option-area').append(`
+                <div style='margin-bottom:8px;'>
+                    <input type="checkbox" class="opt-check" data-optid="${opt.OptionId}">
+                    ${opt.OptionName} (+¥${opt.ExtraPrice})
+                </div>
+            `);
+        });
+    }
+
+    $('#item-modal-bg').fadeIn(150);
+    $('#item-modal').fadeIn(200);
+}
+
+// 数量変更
+function changeQty(delta) {
+    selectedQty = Math.max(1, selectedQty + delta);
+    $('#modal-qty').text(selectedQty);
+}
+
+// 閉じる
+function closeItem() {
+    $('#item-modal').fadeOut(150);
+    $('#item-modal-bg').fadeOut(150);
+}
+
+// ---------- カート追加 ----------
+function addToCart() {
+    if (!selectedMenu) return;
+
+    var item = {
+        menuId: selectedMenu.MenuId,
+        name: selectedMenu.Name,
+        price: selectedMenu.Price,
+        qty: selectedQty,
+        options: []
+    };
+
+    $('.opt-check:checked').each(function () {
+        var optId = $(this).data('optid');
+
+        for (var groupId in optionsGrouped) {
+            var found = optionsGrouped[groupId].find(o => o.OptionId === optId);
+            if (found) {
+                item.options.push({
+                    id: found.OptionId,
+                    name: found.OptionName,
+                    extraPrice: found.ExtraPrice
+                });
+                break;
+            }
+        }
+    });
+
+    cart.push(item);
+    renderCart();
+    closeItem();
+}
+
+// ---------- カート表示 ----------
+function renderCart() {
+    var box = $('#cart-items');
+    box.empty();
+
+    if (cart.length === 0) {
+        box.html('<p class="text-muted">カートは空です</p>');
+        $('#cart-total').text("合計：0円");
+        return;
+    }
+
+    var total = 0;
+
+    cart.forEach(function (item, index) {
+        var optionTotal = item.options.reduce((sum, o) => sum + o.extraPrice, 0);
+        var subtotal = (item.price + optionTotal) * item.qty;
+        total += subtotal;
+
+        var html = `
+        <div class="mb-3 d-flex justify-content-between align-items-start">
+
+            <div>
+                <strong>${item.name} × ${item.qty}</strong><br>
+        `;
+
+        item.options.forEach(opt => {
+            html += `<span class="text-muted"> └ ${opt.name}（+¥${opt.extraPrice}）</span><br>`;
+        });
+
+        html += `
+                <span class="text-end d-block">小計：${subtotal}円</span>
+            </div>
+
+            <button class="btn btn-sm btn-outline-danger cart-remove-btn" data-index="${index}">
+                ×
+            </button>
+
+        </div>
+        `;
+
+        box.append(html);
+    });
+
+    $('#cart-total').text("合計：" + total + "円");
+}
+
+// ---------- カート削除 ----------
+$(document).on("click", ".cart-remove-btn", function () {
+    const index = $(this).data("index");
+    cart.splice(index, 1);
+    renderCart();
+});
+
+        // =======================================================
+        // ⭐ 注文送信（sendOrder）
+        // =======================================================
+        function sendOrder() {
+
+            if (cart.length === 0) {
+                alert("カートが空です。");
+                return;
+            }
+
+            // URL から tableId を取得
+            const urlParams = new URLSearchParams(window.location.search);
+            const tableId = parseInt(urlParams.get("tableId"));
+
+            // サーバーに送るデータ
+            var payload = {
+                TableId: tableId,
+                NumPeople: parseInt($("#numPeople").val()),
+                Items: cart.map(item => ({
+                    MenuId: item.menuId,
+                    Qty: item.qty,
+                    OptionIds: item.options.map(opt => opt.id)
+                }))
+            };
+
+            console.log("送信データ：", payload); // ← デバッグ用（画面に表示したいときに役立つ）
+
+            // Ajaxで注文送信
+            $.ajax({
+                url: '/Orders/Submit',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify(payload),
+                success: function (res) {
+
+                    alert("注文を送信しました！");
+
+                    // カートをクリアして再描画
+                    cart = [];
+                    renderCart();
+
+                    // テーブル一覧へ戻る（動作OK）
+                    window.location.href = '/Tables/Index';
+                },
+                error: function (xhr, status, error) {
+                    alert("注文送信エラー：" + xhr.responseText);
+                }
+            });
+        }// ============================
+        // ★ 過去の注文（OPEN注文）読み込み
+        // ============================
+        function loadOrderModal() {
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const tableId = urlParams.get("tableId");
+
+            $.getJSON(`/api/orders/table/${tableId}`, function (items) {
+
+                let html = "";
+                let total = 0;
+
+                if (items.length === 0) {
+                    html = '<p class="text-muted">過去の注文はありません</p>';
+                } else {
+
+                    items.forEach(it => {
+
+                        const subtotal = it.Price * it.Quantity;
+                        total += subtotal;
+
+                        // オプションのHTML
+                        let optHtml = "";
+                        if (it.Options && it.Options.length > 0) {
+                            it.Options.forEach(opt => {
+                                optHtml += `
+                        <div class="text-muted ms-3">
+                            └ ${opt.OptionName}（+¥${opt.ExtraPrice}）
+                        </div>`;
+                            });
+                        }
+
+                        html += `
+<div class="order-item border rounded p-2 mb-2"
+     data-id="${it.OrderItemId}"
+     data-price="${it.Price}">
+    <div class="d-flex justify-content-between align-items-center">
+
+        <div>
+            <strong>${it.MenuName}</strong>
+            ${optHtml}
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <button class="btn btn-sm btn-outline-secondary btn-minus">－</button>
+
+            <span class="mx-2 fs-5 qty">${it.Quantity}</span>
+
+            <button class="btn btn-sm btn-outline-primary btn-plus">＋</button>
+
+        </div>
+    </div>
+
+    <div class="text-end mt-1 subtotal">
+        小計：${subtotal} 円
+    </div>
+</div>`;
+                    });
+                }
+
+                $("#orderModalItems").html(html);
+                $("#orderModalTotal").text(total);
+            });
+        }
+
+
+        // ============================
+        // ★ 数量増減（＋／−）※画面上だけ変更
+        // ============================
+        $(document).on("click", ".order-item .btn-plus", function () {
+
+            let box = $(this).closest(".order-item");
+            let qtyEl = box.find(".qty");
+            let qty = Number(qtyEl.text());
+
+            qty = qty + 1;                 // 上限なし（必要なら制限を追加）
+
+            applyQtyChange(box, qty);
+        });
+
+        $(document).on("click", ".order-item .btn-minus", function () {
+
+            let box = $(this).closest(".order-item");
+            let qtyEl = box.find(".qty");
+            let qty = Number(qtyEl.text());
+
+            // 0 までは減らして OK（0 = 削除予約）
+            qty = Math.max(0, qty - 1);
+
+            applyQtyChange(box, qty);
+        });
+
+        // 1行分の数量・小計を再計算（DOM のみ）
+        function applyQtyChange(box, newQty) {
+
+            box.find(".qty").text(newQty);
+
+            const price = Number(box.data("price"));
+            const subtotal = price * newQty;
+
+            box.find(".subtotal").text("小計：" + subtotal + " 円");
+
+            refreshTotal();
+        }
+
+        // ============================
+        // ★ 合計の再計算（DOMのみ）
+        // ============================
+        function refreshTotal() {
+            let total = 0;
+
+            $("#orderModalItems .order-item").each(function () {
+                let box = $(this);
+                let price = Number(box.data("price"));
+                let qty = Number(box.find(".qty").text());
+                total += price * qty;
+            });
+
+            $("#orderModalTotal").text(total);
+        }
+
+
+        // ============================
+        // ★ 変更を保存（ここで初めて API 呼び出し）
+        // ============================
+        function saveOrderChanges() {
+
+            let tasks = [];
+
+            $("#orderModalItems .order-item").each(function () {
+
+                let box = $(this);
+                let id = Number(box.data("id"));
+                let qty = Number(box.find(".qty").text());
+
+                // 変更がなくても送って OK（API 側で上書きするだけ）
+                tasks.push($.ajax({
+                    url: "/api/orders/updateQuantity",
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        OrderItemId: id,
+                        Quantity: qty   // 0 の場合は API 側で削除
+                    })
+                }));
+            });
+
+            Promise.all(tasks)
+                .then(function () {
+                    alert("変更を保存しました。");
+                    // モーダルを閉じる & 画面リロード
+                    $('#orderModal').modal('hide');   // Bootstrap5ならこちらでもOK
+                    location.reload();
+                })
+                .catch(function (err) {
+                    alert("保存中にエラーが発生しました：" + (err.responseText || ""));
+                });
+        }
+
+
+        // モーダルが開かれたときに毎回最新データを読み込む
+        $('#orderModal').on('show.bs.modal', function () {
+            loadOrderModal();
+        });
+
+
+    </script>
+}

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - マイ ASP.NET アプリケーション</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("アプリケーション名", "Index", "Home", null, new { @class = "navbar-brand" })
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - マイ ASP.NET アプリケーション</p>
+        </footer>
+    </div>
+
+    <!-- jQuery（必須） -->
+    @Scripts.Render("~/bundles/jquery")
+
+    <!-- bootstrap -->
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!-- 各ビュー側の script -->
+    @RenderSection("scripts", required: false)
+
+    <!-- ★ SignalR（必ず最後に読み込む） -->
+    <script src="~/Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <script src="/signalr/hubs"></script>
+</body>
+</html>
+
+

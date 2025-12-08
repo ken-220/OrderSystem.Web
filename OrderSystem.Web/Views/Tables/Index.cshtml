@@ -1,0 +1,79 @@
+﻿@model List<OrderSystem.Web.Models.ViewModels.TableCardViewModel>
+
+@{
+    ViewBag.Title = "テーブル一覧";
+}
+
+
+
+
+    <div class="container mb-3" style="margin-top: 20px;">
+        <div class="d-flex align-items-center gap-3">
+            <h2 class="fw-bold mb-0">テーブル一覧</h2>
+
+            <a href="/Home/Menu" class="btn btn-secondary btn-sm">
+                選択画面に戻る
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        .table-card {
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            transition: 0.2s;
+        }
+
+        /* 空席（デフォルト） */
+        .status-empty {
+            background: #ffffff;
+        }
+
+        /* 注文中（OPEN） */
+        .status-open {
+            background: #e7f1ff; /* 薄い青 */
+            border-color: #3f8cff;
+        }
+
+        /* ホバーでふわっと浮く効果 */
+        .table-card {
+            transition: all 0.25s ease;
+        }
+
+            .table-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            }
+    </style>
+
+
+    <div class="row">
+        @foreach (var t in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-sm p-3 table-card @(t.IsOccupied ? "status-open" : "status-empty")"
+                     style="cursor:pointer;"
+                     onclick="location.href='/Orders/New?tableId=@t.TableId'">
+
+
+                    <h4>@t.TableName</h4>
+
+                    @if (!t.IsOccupied)
+                    {
+                        <p class="text-muted">空席</p>
+                    }
+                    else
+                    {
+                        <p>@t.NumPeople 人</p>
+                        <p>@t.ElapsedText</p>
+                        <p>¥@t.TotalAmount</p>
+                    }
+
+                </div>
+            </div>
+        }
+    </div>

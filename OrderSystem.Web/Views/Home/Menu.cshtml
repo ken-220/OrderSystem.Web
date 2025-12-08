@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "メニュー選択";
+    var role = ViewBag.Role as string;
+}
+
+<a href="/Auth/Logout" class="btn btn-outline-secondary mb-3">
+    ← ログイン画面へ戻る
+</a>
+
+
+<div class="text-center mt-4 mb-4">
+
+    <div style="font-size: 32px; font-weight: 700; color: #222;">
+        📋メニューを選択してください
+    </div>
+
+    <!-- 黒線（長め・中央配置） -->
+    <div style="
+        width: 360px;
+        height: 3px;
+        background: #222;
+        margin: 10px auto 20px auto;
+        border-radius: 2px;
+    "></div>
+
+</div>
+
+
+
+@if (role == "Kitchen")
+{
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-4">
+            <a href="/Kitchen/Index" class="btn btn-primary btn-lg w-100 py-3">
+                🍳 キッチン画面へ
+            </a>
+        </div>
+    </div>
+}
+else if (role == "Hall")
+{
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-4">
+            <a href="/Tables/Index" class="btn btn-primary btn-lg w-100 py-3">
+                🍽 テーブル一覧へ
+            </a>
+        </div>
+    </div>
+}
+else
+{
+    <p class="text-danger mt-4">権限が確認できません。管理者に連絡してください。</p>
+}
+
+<!-- 共通のレジボタン（Kitchen でも Hall でも表示） -->
+<div class="row justify-content-center mb-4">
+    <div class="col-md-4">
+        <a href="/Cashier/Index" class="btn btn-success btn-lg w-100 py-3">
+            🧾 レジ画面へ
+        </a>
+    </div>
+</div>
+
+</div>

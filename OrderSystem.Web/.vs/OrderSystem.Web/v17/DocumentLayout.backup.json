@@ -1,0 +1,625 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|c:\\users\\k_tsurukawa_0061\\source\\repos\\ordersystem.web\\ordersystem.web\\app_start\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\app_start\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|c:\\users\\k_tsurukawa_0061\\source\\repos\\ordersystem.web\\ordersystem.web\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\api\\kitchenapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\api\\kitchenapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\hubs\\kitchenhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\hubs\\kitchenhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|OrderSystem.Web||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\views\\kitchen\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\views\\kitchen\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\controllers\\kitchencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\controllers\\kitchencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\views\\orders\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\views\\orders\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\views\\tables\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\views\\tables\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\controllers\\tablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\controllers\\tablescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\ordernewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\ordernewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\viewmodels\\tablecardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\viewmodels\\tablecardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\migrations\\202511200138400_fixmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\migrations\\202511200138400_fixmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\api\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\api\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\ordersubmitviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\ordersubmitviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\menuoptiongroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\menuoptiongroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\migrations\\202511170743251_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\migrations\\202511170743251_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\optiongroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\optiongroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\ordersdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\ordersdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\ordersystem.web\\models\\orderitemoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|solutionrelative:ordersystem.web\\models\\orderitemoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1709AB5C-D176-496C-A182-5759CAFFDBBF}|OrderSystem.Web\\OrderSystem.Web.csproj|c:\\users\\k_tsurukawa_0061\\source\\repos\\ordersystem.web\\ordersystem.web\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|909d16b3-c8e8-43d1-a2b8-26ea0d4b6b57"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 339,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\packages.config",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\packages.config",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\packages.config",
+              "RelativeToolTip": "OrderSystem.Web\\packages.config",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-25T02:18:34.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\App_Start\\Startup.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\App_Start\\Startup.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\App_Start\\Startup.cs",
+              "RelativeToolTip": "OrderSystem.Web\\App_Start\\Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T01:44:32.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Web.config",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Web.config",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Web.config",
+              "RelativeToolTip": "OrderSystem.Web\\Web.config",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-17T06:40:36.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Kitchen\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Views\\Kitchen\\Index.cshtml",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Kitchen\\Index.cshtml",
+              "RelativeToolTip": "OrderSystem.Web\\Views\\Kitchen\\Index.cshtml",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAowCgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T08:26:43.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OrderSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T07:47:35.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "OrderSystem.Web\\App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T07:32:13.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "202511200138400_FixModels.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Migrations\\202511200138400_FixModels.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Migrations\\202511200138400_FixModels.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Migrations\\202511200138400_FixModels.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Migrations\\202511200138400_FixModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T01:38:43.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KitchenApiController.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Api\\KitchenApiController.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Api\\KitchenApiController.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Api\\KitchenApiController.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Api\\KitchenApiController.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAQwI8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T01:03:25.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KitchenController.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\KitchenController.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Controllers\\KitchenController.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\KitchenController.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Controllers\\KitchenController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:23:58.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderSystem.Web",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\OrderSystem.Web.csproj",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\OrderSystem.Web.csproj",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\OrderSystem.Web.csproj",
+              "RelativeToolTip": "OrderSystem.Web\\OrderSystem.Web.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-18T06:49:55.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderSubmitViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderSubmitViewModels.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\OrderSubmitViewModels.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderSubmitViewModels.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\OrderSubmitViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T06:39:29.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T02:50:57.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Tables\\Index.cshtml",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Views\\Tables\\Index.cshtml",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Tables\\Index.cshtml",
+              "RelativeToolTip": "OrderSystem.Web\\Views\\Tables\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T02:28:36.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OrderNewViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderNewViewModel.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\OrderNewViewModel.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderNewViewModel.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\OrderNewViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T02:53:32.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "OrderSystem.Web\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T01:57:04.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "OrderSystem.Web\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T01:38:30.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "New.cshtml",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Orders\\New.cshtml",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Views\\Orders\\New.cshtml",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Views\\Orders\\New.cshtml",
+              "RelativeToolTip": "OrderSystem.Web\\Views\\Orders\\New.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAJoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T02:55:30.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KitchenHub.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Hubs\\KitchenHub.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Hubs\\KitchenHub.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Hubs\\KitchenHub.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Hubs\\KitchenHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T01:18:08.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Api\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Api\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Api\\OrdersController.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Api\\OrdersController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAiwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T01:12:55.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TablesController.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\TablesController.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Controllers\\TablesController.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\TablesController.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Controllers\\TablesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T01:08:45.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TableCardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\ViewModels\\TableCardViewModel.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\ViewModels\\TableCardViewModel.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\ViewModels\\TableCardViewModel.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\ViewModels\\TableCardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T01:04:47.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T00:49:46.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "202511170743251_Init.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Migrations\\202511170743251_Init.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Migrations\\202511170743251_Init.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Migrations\\202511170743251_Init.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Migrations\\202511170743251_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:43:28.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:42:06.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OrdersDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrdersDbContext.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\OrdersDbContext.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrdersDbContext.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\OrdersDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:12:33.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "OrderItemOption.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderItemOption.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\OrderItemOption.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderItemOption.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\OrderItemOption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:11:10.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OrderItem.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:10:04.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\Order.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:09:16.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MenuOptionGroup.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\MenuOptionGroup.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\MenuOptionGroup.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\MenuOptionGroup.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\MenuOptionGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:08:28.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Option.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\Option.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\Option.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\Option.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\Option.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:07:47.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OptionGroup.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OptionGroup.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\OptionGroup.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\OptionGroup.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\OptionGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:07:05.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\MenuItem.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\MenuItem.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:06:13.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Table.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\Table.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\Table.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\Table.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\Table.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:05:09.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\User.cs",
+              "RelativeDocumentMoniker": "OrderSystem.Web\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\k_tsurukawa_0061\\source\\repos\\OrderSystem.Web\\OrderSystem.Web\\Models\\User.cs",
+              "RelativeToolTip": "OrderSystem.Web\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T06:47:19.733Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 61,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

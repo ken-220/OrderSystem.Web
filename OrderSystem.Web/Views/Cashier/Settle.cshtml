@@ -1,0 +1,42 @@
+﻿@model OrderSystem.Web.Models.ViewModels.CashierSettleViewModel
+
+
+
+<h2>会計 - @Model.TableName</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>商品</th>
+            <th>数量</th>
+            <th>単価</th>
+            <th>小計</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.Items)
+        {
+            <tr>
+                <td>@i.MenuName</td>
+                <td>@i.Quantity</td>
+                <td>@i.UnitPrice</td>
+                <td>@i.Subtotal</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3 class="text-end">合計：@Model.TotalAmount 円</h3>
+
+<form method="post" action="/Cashier/SettleConfirm">
+
+    <input type="hidden" name="orderId" value="@Model.OrderId" />
+
+    <h4>支払方法</h4>
+    <label><input type="radio" name="paymentMethod" value="CASH" checked> 現金</label><br />
+    <label><input type="radio" name="paymentMethod" value="CARD"> カード</label>
+
+    <button type="submit" class="btn btn-success mt-3">会計確定</button>
+</form>
+
+<a href="/Cashier/Index" class="btn btn-secondary mt-3">戻る</a>

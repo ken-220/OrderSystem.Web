@@ -1,0 +1,79 @@
+﻿@model IEnumerable<OrderSystem.Web.Models.ViewModels.CashierTableViewModel>
+
+<div style="background-color: #f5f6fa; min-height: 100vh; padding-top: 25px;">
+    <div class="container">
+
+        <div class="container mb-3" style="margin-top: 20px;">
+            <div class="d-flex align-items-center gap-3">
+                <h2 class="fw-bold mb-0">レジ・テーブル一覧</h2>
+
+                <a href="/Home/Menu" class="btn btn-secondary btn-sm">
+                    選択画面に戻る
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            @foreach (var t in Model)
+            {
+                var cardClass = t.HasOpenOrder ? "table-card-active" : "table-card-empty";
+
+                <div class="col-md-3 mb-4">
+                    <div class="card table-card @cardClass shadow-sm rounded-4 p-3">
+
+                        <h4 class="fw-bold">@t.TableName</h4>
+
+                        @if (t.HasOpenOrder)
+                        {
+                            <p class="mb-1 text-primary fw-bold">未会計：@t.TotalAmount 円</p>
+                            <p class="text-muted mb-1">人数：@t.NumPeople 人</p>
+                            <p class="text-muted mb-2">注文数：@t.OrderItemCount 件</p>
+
+                            <a href="/Cashier/Settle?tableId=@t.TableId"
+                               class="btn btn-primary w-100 mt-2">
+                                会計へ
+                            </a>
+                        }
+                        else
+                        {
+                            <p class="text-muted">注文なし</p>
+                        }
+
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .table-card {
+        transition: transform 0.15s ease, box-shadow 0.2s ease;
+        border-width: 2px;
+    }
+
+    /* 未会計（注文あり） → 青枠 */
+    .table-card-active {
+        border-color: #0d6efd;
+        background-color: white;
+    }
+
+    /* 注文なし → 薄いグレー */
+    .table-card-empty {
+        border-color: #d6d6d6;
+        background-color: #fafafa;
+    }
+
+    /* ホバー演出（浮く） */
+    .table-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+</style>
+
