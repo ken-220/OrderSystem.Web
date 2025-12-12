@@ -18,6 +18,11 @@ namespace OrderSystem.Web.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<OrderItemOption> OrderItemOptions { get; set; }
+        
+        public DbSet<Ingredient> Ingredients { get; set; }          //食材マスタ
+        public DbSet<MenuIngredient> MenuIngredients { get; set; }     //メニューと食材の対応
+        public DbSet<PurchaseHistory> PurchaseHistories { get; set; }   //発注履歴
+
 
         protected override void OnModelCreating(DbModelBuilder mb)
         {
@@ -31,7 +36,11 @@ namespace OrderSystem.Web.Models
               .Property(x => x.Quantity)
               .IsRequired();
 
-            base.OnModelCreating(mb);
+     　　　 mb.Entity<MenuIngredient>()
+ 　　　　　　 .HasKey(x => new { x.MenuId, x.IngredientId });
+
+
+      base.OnModelCreating(mb);
         }
     }
 }

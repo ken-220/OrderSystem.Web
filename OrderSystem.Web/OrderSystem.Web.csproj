@@ -194,6 +194,8 @@
       <DependentUpon>202512050317450_SyncModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\MenuIngredient.cs" />
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\MenuOptionGroup.cs" />
     <Compile Include="Models\Option.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="Models\OrdersDbContext.cs" />
     <Compile Include="Models\OrderSubmitViewModels.cs" />
     <Compile Include="Models\OrderUpdateRequest.cs" />
+    <Compile Include="Models\PurchaseHistory.cs" />
     <Compile Include="Models\Table.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\ViewModels\CashierItemViewModel.cs" />
