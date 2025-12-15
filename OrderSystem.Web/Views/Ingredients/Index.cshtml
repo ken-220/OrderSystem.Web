@@ -1,0 +1,23 @@
+﻿@model IEnumerable<OrderSystem.Web.Models.Ingredient>
+
+
+<h2>食材一覧</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>食材名</th>
+        <th>在庫</th>
+        <th>最低在庫</th>
+    </tr>
+
+@foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IngredientId</td>
+                    <td>@item.Name</td>
+                    <td>@item.CurrentStock</td>
+                    <td>@item.MinimumStock</td>
+                </tr>
+            }
+    </table>
