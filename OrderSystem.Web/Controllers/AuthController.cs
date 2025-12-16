@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using OrderSystem.Web.Models;
+using System;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using OrderSystem.Web.Models;
 
 namespace OrderSystem.Web.Controllers
 {
@@ -29,11 +31,31 @@ namespace OrderSystem.Web.Controllers
                 return View();
             }
 
-            // ログイン
-            FormsAuthentication.SetAuthCookie(user.Name, false);
+      // ログイン
+      // 認証チケットを作成（Role を含める）
+      var ticket = new FormsAuthenticationTicket(
+          1,
+          user.Name,                  // ユーザー名
+          DateTime.Now,
+          DateTime.Now.AddMinutes(60),
+          false,
+          user.Role                   // ★ Admin / Kitchen / Hall
+      );
 
-            // ロールを Session に記録（Kitchen 画面の判断に必要）
-            Session["Role"] = user.Role;
+      // 暗号化
+      string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+
+      // Cookie に詰める
+      var authCookie = new HttpCookie(
+          FormsAuthentication.FormsCookieName,
+          encryptedTicket
+      );
+
+      Response.Cookies.Add(authCookie);
+
+
+      // ロールを Session に記録（Kitchen 画面の判断に必要）
+      Session["Role"] = user.Role;
 
           
 

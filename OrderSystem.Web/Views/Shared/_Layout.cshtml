@@ -13,6 +13,16 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
             @Html.ActionLink("アプリケーション名", "Index", "Home", null, new { @class = "navbar-brand" })
+
+            <ul class="navbar-nav ms-auto">
+                @* 管理者のみ表示　*@
+                @if (User.IsInRole("Admin"))   //今ログインしているユーザーが Admin ロールか？
+            {
+                <li class="nav-item">
+                    @Html.ActionLink("管理画面", "Index", "Admin", null, new { @class = "nav-link" })
+                </li>
+            }
+            </ul>
         </div>
     </nav>
 

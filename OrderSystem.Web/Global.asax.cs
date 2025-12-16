@@ -1,9 +1,15 @@
 using OrderSystem.Web.Models;
+using System;
 using System.Data.Entity;
+using System.Security.Principal;
+using System.Web;
 using System.Web.Http;          // Web API（/api/...）を使うため
 using System.Web.Mvc;           // MVC（Controller / View）を使うため
 using System.Web.Optimization;  // CSS / JS の Bundle（圧縮/結合）機能
 using System.Web.Routing;       // ルーティング（URLとアクションを結びつける）
+using System.Web.Security;
+
+
 
 namespace OrderSystem.Web
 {
@@ -32,5 +38,26 @@ namespace OrderSystem.Web
             // ⑤ CSS / JS をまとめて圧縮する仕組み（Bundle）を登録
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+    protected void Application_AuthenticateRequest(object sender, EventArgs e)
+    {
+      if (HttpContext.Current.User != null &&
+          HttpContext.Current.User.Identity.IsAuthenticated)
+      {
+        var authCookie = Context.Request.Cookies[FormsAuthentication.FormsCookieName];
+        if (authCookie == null) return;
+
+        var ticket = FormsAuthentication.Decrypt(authCookie.Value);
+        if (ticket == null) return;
+
+        var roles = ticket.UserData.Split(',');
+
+        Context.User = new GenericPrincipal(
+            Context.User.Identity,
+            roles
+        );
+      }
     }
+
+  }
 }
